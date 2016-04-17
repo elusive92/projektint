@@ -1,0 +1,8 @@
+[{
+"pk": 388152,
+"model": "sites.site",
+"fields": {
+    "name": "web admin",
+    "domain":"webadmin.example.com"
+    }
+}]

@@ -1,0 +1,69 @@
+2016-04-04 17:36:21,182 - [1;37mINFO[0m - 1410:MainThread - zato.common.repo:41 - Location [/opt/zato_files/web-admin/config/repo] is not a Bazaar branch. Will turn it into one.
+2016-04-05 17:10:44,793 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:11:49,688 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:13:30,314 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.security.apikey.get-list]
+2016-04-05 17:14:04,993 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:18:18,458 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:19:47,812 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:25:27,456 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:25:59,883 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:26:10,970 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-05 17:26:12,511 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-07 17:41:50,581 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-07 17:41:53,701 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-07 18:16:56,591 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-10 06:57:57,165 - [1;37mINFO[0m - 1427:MainThread - zato.admin.web.views:308 - can_invoke_admin_service returned False, not invoking an admin service:[zato.service.get-list]
+2016-04-10 09:41:45,145 - [1;31mERROR[0m - 27135:MainThread - zato.client:180 - inner.status_code `504`, JSON parsing error `<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+`
+2016-04-10 09:42:00,227 - [1;31mERROR[0m - 27135:MainThread - zato.client:180 - inner.status_code `504`, JSON parsing error `<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+`
+2016-04-10 09:50:42,418 - [1;31mERROR[0m - 27692:MainThread - zato.client:180 - inner.status_code `504`, JSON parsing error `<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+`
+2016-04-10 10:18:05,438 - [1;31mERROR[0m - 29163:MainThread - zato.client:180 - inner.status_code `504`, JSON parsing error `<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+`
+2016-04-10 16:05:47,875 - [1;31mERROR[0m - 17596:MainThread - zato.client:180 - inner.status_code `504`, JSON parsing error `<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+`
+2016-04-16 15:52:05,275 - [1;31mERROR[0m - 19153:MainThread - zato.admin.web.views.http_soap:197 - Could not create the object, e:[Traceback (most recent call last):
+  File "/opt/zato/2.0.7/zato-web-admin/src/zato/admin/web/views/http_soap.py", line 189, in create
+    response = req.zato.client.invoke('zato.http-soap.create', _get_edit_create_message(req.POST))
+  File "/opt/zato/2.0.7/zato-web-admin/src/zato/admin/middleware.py", line 72, in invoke
+    raise Exception('CID: {}\nDetails: {}'.format(zato_env.get('cid'), zato_env.get('details')))
+Exception: CID: K072RWAQYSDGE8H9B038SE4Z1QVP
+Details: Traceback (most recent call last):
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/connection/http_soap/channel.py", line 198, in dispatch
+    payload, worker_store, self.simple_io_config, post_data)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/connection/http_soap/channel.py", line 350, in handle
+    params_priority=channel_item.params_pri)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 401, in update_handle
+    self._invoke(service, channel)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 344, in _invoke
+    service.handle()
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/internal/service.py", line 271, in handle
+    response = func(id_, payload, channel, data_format, transport, serialize=True)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 499, in invoke
+    return self.invoke_by_impl_name(self.server.service_store.name_to_impl_name[name], *args, **kwargs)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 483, in invoke_by_impl_name
+    return self.update_handle(*invoke_args, **kwargs)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 428, in update_handle
+    raise Exception(exc_formatted)
+Exception: Traceback (most recent call last):
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 401, in update_handle
+    self._invoke(service, channel)
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/__init__.py", line 344, in _invoke
+    service.handle()
+  File "/opt/zato/2.0.7/zato-server/src/zato/server/service/internal/http_soap.py", line 150, in handle
+    raise Exception(msg)
+Exception: Service [request-sender.get-client-details] does not exist on this cluster
+
+
+]
