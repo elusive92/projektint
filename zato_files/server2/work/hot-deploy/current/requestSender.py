@@ -22,7 +22,7 @@ class GetClientDetails(Service):
 	
 		appName = list(self.request.payload)[0]
 		for i in self.request.payload[appName]['fields']:
-			payload = {"requestID": "0", "app_type": appName, "payload": i}
+			payload = {"requestID": self.request.payload[appName]['requestID'], "app_type": appName, "payload": i}
 			headers = {'content-type': 'application/json'}
 			json_data = json.dumps(payload)
 			r = requests.post(url, data=json.dumps(payload), headers=headers)
