@@ -6,7 +6,7 @@ class Media_request_manager(models.Manager):
         return super(Media_request_manager, self).filter(requestID=appID, app_type=app_name)
 
 class Media_request(models.Model):
-    requestID = models.CharField(max_length=120)
+    requestID = models.CharField(max_length=500)
     app_type = models.CharField(max_length=120)
     payload = models.CharField(max_length=240)
     
