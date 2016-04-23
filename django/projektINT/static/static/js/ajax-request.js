@@ -16,7 +16,7 @@ $(document).ready(function() {
     
             $.ajax({
                 
-                url: 'http://192.168.0.105:8000/api/v1/mediarequest/',
+                url: 'http://127.0.0.1:8000/api/v1/mediarequest/',
                 data: {
                     'username': 'admin',
                     'api_key': '65714eec974d6ac96f6f3d6dce2f8050fe250ecf',
