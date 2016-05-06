@@ -737,3 +737,11 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+.AppLogo {
+    height: 30px;
+    width: 40px;
+}
+#payload .centerLogo {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    var twiterLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png";
+    var flickrLogo= "https://www.marcus-povey.co.uk/wp-content/transparent-flickr-logo-icon.png";
    
     function isUrl(str) {
       var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
@@ -43,8 +46,15 @@ $(document).ready(function() {
                         	var payload = isPhoto ? '<img src="' : '';
                         	payload += object[i].payload;
                         	payload += isPhoto ? '">' : '';
-                        
-                        	var html = '<tr><td>'+payload+'</td><td></td></tr>';
+                        	var imgUrl;
+                        	var appType = object[i].app_type;
+                        	if (appType === 'TwitterApp') {
+                        	    imgUrl = twiterLogo;
+                        	} else {
+                        	    imgUrl = flickrLogo;
+                        	}
+
+                        	var html = '<tr><td>'+payload+'</td><td class="centerLogo"><img src="' + imgUrl + '" class="AppLogo"/></td></tr>';
                         	$(tabContent).append(html);
                     	}
 		    }
