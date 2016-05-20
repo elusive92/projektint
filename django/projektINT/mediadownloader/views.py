@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import MediaForm
 from django.http import HttpResponse
-# import zmq
+import zmq
 import os
 import binascii
 
@@ -19,15 +19,15 @@ def home(request):
     form = MediaForm(request.POST or None)
     confirm_message = None
 
-    # if form.is_valid():
-        # confirm_message = 'We are searching for new information'
-        # contextZMQ = zmq.Context()
-        # socket = contextZMQ.socket(zmq.REQ)
-        # socket.connect ("tcp://localhost:5556")
-        # socket.send_string("{{\"MediaApp\":{{\"requestID\": \"{reqID}\",\"application\": \"twitter\",\"request\": \"getTweetsByCord\",\"city\": \"{city}\"}}}}".format(city=form.cleaned_data['city'], reqID=requestID))
-        # socket.recv()
-        # socket.send_string("{{\"MediaApp\":{{\"requestID\": \"{reqID}\",\"application\": \"flickr\",\"request\": \"getPictureByCord\",\"city\": \"{city}\"}}}}".format(city=form.cleaned_data['city'], reqID=requestID))
-        # form = None
+    if form.is_valid():
+        confirm_message = 'We are searching for new information'
+        contextZMQ = zmq.Context()
+        socket = contextZMQ.socket(zmq.REQ)
+        socket.connect ("tcp://localhost:5556")
+        socket.send_string("{{\"MediaApp\":{{\"requestID\": \"{reqID}\",\"application\": \"twitter\",\"request\": \"getTweetsByCord\",\"city\": \"{city}\"}}}}".format(city=form.cleaned_data['city'], reqID=requestID))
+        socket.recv()
+        socket.send_string("{{\"MediaApp\":{{\"requestID\": \"{reqID}\",\"application\": \"flickr\",\"request\": \"getPictureByCord\",\"city\": \"{city}\"}}}}".format(city=form.cleaned_data['city'], reqID=requestID))
+        form = None
 
     context = {
         'title': title,
